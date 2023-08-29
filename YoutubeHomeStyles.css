@@ -1,0 +1,74 @@
+ytd-topbar-logo-renderer#logo {
+  position: fixed !important;
+  left: 50% !important;
+  top: 37vh !important;
+  transform: translate(-11vh, -50%) !important;
+}
+
+#logo-icon {
+  height: 10vh !important;
+  width: 20vh !important;
+}
+
+#center.ytd-masthead {
+  position: fixed !important;
+  top: 47vh !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  min-width: 588px !important;
+  max-width: 700px !important;
+}
+
+.gstl_50.sbdd_a {
+  left: 50% !important;
+  top: 50% !important;
+  translate: -58.5% -2px !important;
+}
+
+ytd-mini-guide-entry-renderer[aria-label='Home'] {
+  display: none !important;
+}
+
+ytd-mini-guide-entry-renderer[aria-label='YouTube Music'] {
+  position: fixed !important;
+  top: 57vh !important;
+  left: 40% !important;
+  transform: translate(-50%, -50%) !important;
+}
+
+ytd-mini-guide-entry-renderer[aria-label='Subscriptions'] {
+  position: fixed !important;
+  top: 57vh !important;
+  left: 46.66% !important;
+  transform: translate(-50%, -50%) !important;
+}
+
+ytd-mini-guide-entry-renderer[aria-label='History'] {
+  position: fixed !important;
+  top: 57vh !important;
+  left: 46.66% !important;
+  transform: translate(-50%, -50%) !important;
+}
+
+ytd-mini-guide-entry-renderer[aria-label='Library'] {
+  position: fixed !important;
+  top: 57vh !important;
+  left: 53.32% !important;
+  transform: translate(-50%, -50%) !important;
+}
+
+ytd-mini-guide-entry-renderer[aria-label='Downloads'] {
+  position: fixed !important;
+  top: 57vh !important;
+  left: 60% !important;
+  transform: translate(-50%, -50%) !important;
+}
+
+a.ytd-mini-guide-entry-renderer {
+  width: 80px !important;
+}
+
+ytd-mini-guide-renderer.ytd-app {
+  display: block !important;
+  z-index: 1 !important;
+}

@@ -1,0 +1,233 @@
+/* Common */
+
+::-webkit-scrollbar {
+  width: 15px !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(128, 128, 128, 0.594) !important;
+}
+
+@keyframes transitionFade {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+body {
+  animation: transitionFade 5s ease-in-out;
+}
+
+/* @keyframes transitionFadeOut {
+  0% {
+    opacity: 1;
+  }
+
+  20% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+#player {
+  animation: transitionFadeOut 3s ease-in-out;
+} */
+
+#country-code {
+  display: none;
+}
+
+/* @keyframes transitionIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+} */
+
+/* @keyframes transitionHide {
+  from {
+    width: 380px;
+  }
+
+  to {
+    width: 0px;
+  }
+} */
+
+/* Youtube Home */
+
+#endpoint[title='Shorts'] {
+  display: none !important;
+}
+
+#endpoint[title='Trending'] {
+  display: none !important;
+}
+
+#endpoint[title='Music'] {
+  display: none !important;
+}
+#endpoint[title='Gaming'] {
+  display: none !important;
+}
+#endpoint[title='Sports'] {
+  display: none !important;
+}
+
+#items ytd-mini-guide-entry-renderer.ytd-mini-guide-renderer:nth-child(2) {
+  display: none !important;
+}
+
+ytd-two-column-browse-results-renderer[page-subtype='home']
+  div:nth-child(1)
+  ytd-rich-grid-renderer:nth-child(1) {
+  display: none !important;
+}
+
+/* Youtube Watch */
+
+#related {
+  /* opacity: 0;
+  width: 0;
+  min-width: 0 !important;
+  animation: transitionHide ease-in-out 3.6s;
+  overflow: hidden !important; */
+  display: none !important;
+}
+
+#secondary.ytd-watch-flexy {
+  width: min-content !important;
+  min-width: 0 !important;
+}
+
+#primary.ytd-watch-flexy {
+  max-width: 1048px !important;
+}
+
+@keyframes transitionFullScreen {
+  from {
+    max-height: 576px;
+    max-width: 1024px;
+
+    left: 210px;
+    top: 120px;
+  }
+
+  to {
+    max-height: 864px;
+    max-width: 1536px;
+
+    left: 0;
+    top: 0;
+  }
+}
+
+.html5-main-video {
+  height: fit-content !important;
+  width: 100% !important;
+}
+
+.videoExpanded {
+  animation: transitionFullScreen 1s ease-in-out;
+}
+
+/* .ytp-chrome-bottom {
+  width: 100% !important;
+} */
+
+.videowall-endscreen {
+  display: none !important;
+}
+
+/* Youtube Home Revert */
+
+ytd-topbar-logo-renderer#logo {
+  animation: transitionIn 4s ease-in-out;
+  position: unset !important;
+  left: unset !important;
+  top: unset !important;
+  transform: unset !important;
+}
+
+#logo-icon {
+  height: 20px !important;
+  width: 97px !important;
+}
+
+#center.ytd-masthead {
+  animation: transitionIn 4s;
+  position: unset !important;
+  top: unset !important;
+  left: unset !important;
+  min-width: unset !important;
+  transform: unset !important;
+}
+
+.gstl_50.sbdd_a {
+  left: 50% !important;
+  top: 6% !important;
+  translate: -62% 0 !important;
+}
+
+a.ytd-mini-guide-entry-renderer {
+  width: 64px !important;
+}
+
+ytd-mini-guide-entry-renderer {
+  animation: transitionIn 4s !important;
+}
+
+ytd-mini-guide-entry-renderer[aria-label='Home'] {
+  animation: unset !important;
+  display: flex !important;
+}
+
+ytd-mini-guide-entry-renderer[aria-label='Subscriptions'] {
+  position: unset !important;
+  left: unset !important;
+  top: unset !important;
+  transform: unset !important;
+}
+
+ytd-mini-guide-entry-renderer[aria-label='YouTube Music'] {
+  position: unset !important;
+  left: unset !important;
+  top: unset !important;
+  transform: unset !important;
+}
+ytd-mini-guide-entry-renderer[aria-label='Library'] {
+  position: unset !important;
+  left: unset !important;
+  top: unset !important;
+  transform: unset !important;
+}
+
+ytd-mini-guide-entry-renderer[aria-label='Downloads'] {
+  position: unset !important;
+  left: unset !important;
+  top: unset !important;
+  transform: unset !important;
+}
+
+ytd-mini-guide-renderer.ytd-app {
+  display: unset !important;
+  z-index: unset !important;
+}

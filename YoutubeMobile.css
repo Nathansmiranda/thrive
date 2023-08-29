@@ -1,0 +1,12 @@
+#filter-chip-bar {
+  display: none !important;
+}
+
+/* .pivot-shorts */
+ytm-pivot-bar-renderer ytm-pivot-bar-item-renderer:nth-child(2) {
+  display: none !important;
+}
+
+.tab-content[tab-title='Home'] {
+  display: none !important;
+}

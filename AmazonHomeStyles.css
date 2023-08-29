@@ -1,0 +1,49 @@
+@keyframes transitionFade {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+body {  
+  animation: transitionFade 5s ease-in-out;
+}
+
+.nav-sprite.nav-logo-base {
+  height: 60px !important;
+  width: 185px !important;
+  background-size: 612px !important;
+  background-position: -10px -86px !important;
+}
+
+#nav-logo {
+  left: 50vw !important;
+  top: 35vh !important;
+  transform: translate(-50%, -50%) !important;
+}
+
+.nav-logo-locale {
+  font-size: 20px !important;
+  transform: translate(0px, 14px);
+}
+
+#nav-search {
+  position: fixed !important;
+  left: 50vw !important;
+  top: 47vh !important;
+  min-width: 80vh !important;
+  transform: translate(-50%, -50%) !important;
+
+  max-width: 1500px !important;
+}
+
+#nav-global-location-slot {
+  translate: -210px !important;
+}

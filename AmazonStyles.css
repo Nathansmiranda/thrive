@@ -1,0 +1,437 @@
+/* Common */
+
+::-webkit-scrollbar {
+  width: 10px !important;
+  background: white !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(128, 128, 128, 0.594) !important;
+  border-radius: 5px !important;
+}
+
+/* Home */
+
+#nav-main {
+  display: none !important;
+}
+
+#nav-cover {
+  background-color: transparent !important;
+}
+
+.nav-search-scope {
+  border-radius: 25px 0 0 25px !important;
+}
+
+.nav-search-submit {
+  border-radius: 0 25px 25px 0 !important;
+}
+
+.nav-searchbar {
+  border-radius: 25px !important;
+}
+
+#pageContent {
+  display: none !important;
+}
+
+#rhf-shoveler div:nth-child(1) {
+  display: none !important;
+}
+
+#rhf-shoveler div:nth-child(2) {
+  display: none !important;
+}
+
+#rhf {
+  display: none;
+}
+
+.navLeftFooter {
+  display: none !important;
+}
+
+html {
+  background: rgb(19 25 33) !important;
+}
+
+/* Search */
+
+#nav-flyout-searchAjax {
+  border-radius: 15px !important;
+}
+
+#p_n_prime_domestic-title {
+  display: none !important;
+}
+
+#p_n_fulfilled_by_amazon-title {
+  display: none !important;
+}
+
+#p_90-title {
+  display: none !important;
+}
+
+#p_n_free_shipping_eligible-title {
+  display: none !important;
+}
+
+.s-card-container {
+  border-radius: 15px !important;
+}
+
+div.s-main-slot.s-result-list.s-search-results.sg-row {
+  overflow: visible !important;
+}
+
+div.a-section.a-spacing-none.s-result-item.s-flex-full-width {
+  translate: 0 -10px !important;
+}
+
+.sg-col.s-breadcrumb {
+  display: none !important;
+}
+
+.sg-col.sg-col-6-of-20 {
+  margin-left: auto !important;
+}
+
+.a-section.a-spacing-small div:nth-child(3) div:nth-child(2) {
+  display: none !important;
+}
+
+.a-row.a-size-base.a-color-secondary div:nth-child(1) {
+  display: none !important;
+}
+
+.a-row.a-size-base.a-color-secondary
+  div
+  span[aria-label='Fulfilled by Amazon - FREE Shipping'] {
+  display: none !important;
+}
+
+div.a-row.a-size-base.a-color-secondary span span.a-size-small {
+  display: none !important;
+}
+
+div.a-row.a-size-base.a-color-secondary span span.a-size-base.a-color-price {
+  display: none !important;
+}
+
+.a-row.a-size-base.a-color-base {
+  display: block !important;
+}
+
+.a-section.a-spacing-small div:nth-child(5) {
+  display: none !important;
+}
+
+.a-section.a-spacing-small div:nth-child(6) {
+  display: none !important;
+}
+
+.a-section.a-spacing-small div:nth-child(7) {
+  display: none !important;
+}
+
+.a-section.a-spacing-small.puis-padding-left-small.puis-padding-right-small {
+  padding: 0 15px 0px 15px !important;
+  margin-bottom: 0 !important;
+}
+
+.a-section.a-spacing-small.puis-padding-left-micro.puis-padding-right-micro {
+  padding: 0 15px 0px 15px !important;
+  margin-bottom: 0 !important;
+}
+
+.a-section.a-spacing-small div:nth-child(1) h2:nth-child(1) {
+  display: -webkit-box !important;
+  -webkit-box-orient: vertical !important;
+  -webkit-line-clamp: 3 !important;
+  text-overflow: clip !important;
+  height: 75px !important;
+  margin-bottom: 10px !important;
+  overflow: hidden !important;
+  position: relative;
+}
+
+.a-section.a-spacing-small div:nth-child(1) h2:nth-child(1)::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 40px;
+  height: 30px;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.895),
+    white
+  );
+}
+
+.a-section.a-spacing-none.a-spacing-top-small.s-title-instructions-style {
+  display: -webkit-box !important;
+  -webkit-box-orient: vertical !important;
+  -webkit-line-clamp: 3 !important;
+  text-overflow: clip !important;
+  height: 75px !important;
+  margin-bottom: 10px !important;
+  overflow: hidden !important;
+}
+
+h2.a-size-mini.a-spacing-none.a-color-base.s-line-clamp-2 {
+  display: -webkit-box !important;
+  -webkit-box-orient: vertical !important;
+  -webkit-line-clamp: 3 !important;
+  text-overflow: clip !important;
+  height: 75px !important;
+  margin-bottom: 10px !important;
+  text-align: left;
+  overflow: hidden !important;
+}
+
+.a-section.a-spacing-small
+  div.a-section.a-spacing-none.a-spacing-top-micro:nth-child(2) {
+  float: left !important;
+  margin-top: 4px !important;
+}
+
+.a-section.a-spacing-small
+  div.a-section.a-spacing-none.a-spacing-top-micro:nth-child(3) {
+  float: left !important;
+  margin-top: 4px !important;
+}
+
+.a-section.a-spacing-small
+  div.a-section.a-spacing-none.a-spacing-top-micro:nth-child(4) {
+  float: right !important;
+  margin-bottom: 10px !important;
+}
+
+/* change? */
+div.a-section.a-spacing-none.a-spacing-top-mini
+  div.a-row.a-size-base.a-color-secondary {
+  float: right;
+  margin-bottom: 10px;
+}
+
+span[aria-label^='Fulfilled by Amazon'] span.a-color-base {
+  display: none !important;
+}
+
+span[aria-label='FREE Shipping'] span.a-color-base {
+  display: none !important;
+}
+
+span[aria-label^='Get it as soon as'] {
+  display: none !important;
+}
+
+div.a-section.a-spacing-none.a-spacing-top-micro
+  div.a-row.a-size-base.a-color-secondary:nth-child(2)
+  span {
+  display: none !important;
+}
+
+.a-section.a-spacing-none.a-spacing-top-micro
+  div:nth-child(1)
+  span:nth-child(3)
+  span.a-size-base:nth-child(1) {
+  display: none !important;
+}
+
+.a-section.a-spacing-none.a-spacing-top-small.s-price-instructions-style {
+  margin-top: 0 !important;
+  display: block !important;
+  text-align: end !important;
+}
+
+span.a-size-base.puis-normal-weight-text {
+  font-weight: 500 !important;
+  font-size: 18px !important;
+}
+
+.a-icon.a-icon-popover {
+  display: none !important;
+}
+
+.a-link-normal.s-underline-text.s-underline-link-text.s-link-style {
+  color: lightsteelblue !important;
+}
+
+span.a-price-symbol {
+  color: grey !important;
+}
+
+div.a-section.a-spacing-none.a-text-center {
+  display: none !important;
+}
+
+span.a-size-base.a-color-secondary {
+  display: none !important;
+}
+
+span[data-a-strike='true'] {
+  display: none !important;
+}
+
+.a-badge {
+  display: none !important;
+}
+
+.a-link-normal.puis-normal-weight-text.s-underline-text.s-underline-link-text.s-link-style {
+  display: none !important;
+}
+
+span[aria-label='Lowest price in 30 days'] {
+  display: none !important;
+}
+
+.s-color-swatch-link {
+  display: none !important;
+}
+
+.a-divider-normal {
+  display: none !important;
+}
+
+.a-size-base.a-color-link.s-underline-text.a-text-bold {
+  display: none !important;
+}
+
+.amzn-safe-frame-container {
+  display: none !important;
+}
+
+.s-desktop-toolbar {
+  border-bottom: 0 !important;
+  box-shadow: none !important;
+}
+
+.a-price-fraction {
+  display: none !important;
+}
+
+.a-button-dropdown {
+  padding: 6px !important;
+  height: auto !important;
+  background: white !important;
+  border-style: none !important;
+  box-shadow: 0 0 10px #b3b3b3 !important;
+}
+
+.a-button-inner {
+  box-shadow: none !important;
+  background: white !important;
+}
+
+.rhf-divider-no-gradient {
+  display: none !important;
+}
+
+.rhf-border {
+  border: none !important;
+}
+
+.sg-row-align-items-center {
+  overflow: visible !important;
+}
+
+.s-desktop-toolbar {
+  height: 0 !important;
+}
+
+.AdHolder {
+  display: none !important;
+}
+
+/* Product */
+
+#nav-progressive-subnav {
+  display: none !important;
+}
+
+#percolate-ui-ilm_div {
+  display: none !important;
+}
+
+#ask_feature_div {
+  display: none !important;
+}
+
+#acBadge_feature_div {
+  display: none !important;
+}
+
+#vatMessage_feature_div {
+  color: grey !important;
+}
+
+#installmentCalculator_feature_div {
+  color: grey !important;
+}
+
+.savingsPercentage {
+  display: none !important;
+}
+
+.a-section.a-spacing-small.aok-align-center {
+  display: none !important;
+}
+
+#hqpWrapper {
+  display: none !important;
+}
+
+#amsDetailRight_feature_div {
+  display: none !important;
+}
+
+#similarities_feature_div {
+  display: none !important;
+}
+
+#dp-ads-center-promo_feature_div {
+  display: none !important;
+}
+
+#sims-themis-sponsored-products-2_feature_div {
+  display: none !important;
+}
+
+#ad-endcap-1_feature_div {
+  display: none !important;
+}
+
+#cr-ADPlaceholder {
+  display: none !important;
+}
+
+/* Revert Home */
+
+.nav-sprite.nav-logo-base {
+  height: 30px !important;
+  width: 97px !important;
+  background-size: 350px !important;
+  background-position: -10px -51px !important;
+}
+
+#nav-logo {
+  transform: unset !important;
+}
+
+.nav-logo-locale {
+  font-size: unset !important;
+  transform: unset !important;
+}
+
+#nav-search {
+  transform: unset;
+}
+
+#nav-global-location-slot {
+  transform: unset;
+}
