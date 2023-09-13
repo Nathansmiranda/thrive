@@ -24,7 +24,6 @@ var observer2 = new MutationObserver(function (mutationsList) {
 
               videoPlayer.style.maxHeight = '576px'
               videoPlayer.style.maxWidth = '1024px' */
-              
 
               document.addEventListener('fullscreenchange', handleFullscreen)
               document.addEventListener('mozfullscreenchange', handleFullscreen)
@@ -54,9 +53,11 @@ var observer2 = new MutationObserver(function (mutationsList) {
       }
 
       if (vFlag && eFlag) {
-        observer2.disconnect()
-        observer2 = null
-        break
+        if (observer2) {
+          observer2.disconnect()
+          observer2 = null
+          break
+        }
       }
     }
   }

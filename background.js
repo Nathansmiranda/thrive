@@ -58,7 +58,7 @@ const specificStyles = [
   'AmazonProductStyles.css'
 ]
 
-function injectScripts (urlType, tabId) {
+async function injectScripts (urlType, tabId) {
   console.log(contentScripts[urlType])
   if (contentScripts[urlType] != '') {
     console.log('scripting')
@@ -69,7 +69,7 @@ function injectScripts (urlType, tabId) {
     })
   }
 
-  chrome.scripting.insertCSS({
+  await chrome.scripting.insertCSS({
     target: { tabId: tabId },
     files: [styles[urlType]]
   })
@@ -77,12 +77,39 @@ function injectScripts (urlType, tabId) {
   if (specificStyles[urlType] != '') {
     console.log(specificStyles[urlType])
 
-    chrome.scripting.insertCSS({
+    await chrome.scripting.insertCSS({
       target: { tabId: tabId },
       files: [specificStyles[urlType]]
     })
   }
 }
+
+async function removeScripts (urlType, tabId) {
+  console.log(contentScripts[urlType])
+  if (contentScripts[urlType] != '') {
+    console.log('removing scripts')
+    /* chrome.scripting.executeScript({
+      target: { tabId: tabId, allFrames: true },
+      files: [contentScripts[urlType]],
+      injectImmediately: true
+    }) */
+  }
+
+  await chrome.scripting.removeCSS({
+    target: { tabId: tabId },
+    files: [styles[urlType]]
+  })
+
+  if (specificStyles[urlType] != '') {
+    console.log(specificStyles[urlType])
+
+    await chrome.scripting.removeCSS({
+      target: { tabId: tabId },
+      files: [specificStyles[urlType]]
+    })
+  }
+}
+
 //On Url Change
 chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
   if (changeInfo.url) {
@@ -168,4 +195,34 @@ chrome.webNavigation.onCommitted.addListener(details => {
       })
     }
   }
+})
+
+//On enabled or disabled in options
+chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
+  chrome.tabs.query({}, function (tabs) {
+    tabs.forEach(function (tab) {
+      console.log(tab.url)
+      const type = getUrlType(tab.url)
+
+      if (type >= 0 && type <= 3) {
+        if (message.action == 'yt_enabled') {
+          injectScripts(type, tab.id)
+        } else if (message.action == 'yt_disabled') {
+          removeScripts(type, tab.id)
+        }
+      } else if (type == 4) {
+        if (message.action == 'insta_enabled') {
+          injectScripts(type, tab.id)
+        } else if (message.action == 'insta_disabled') {
+          removeScripts(type, tab.id)
+        }
+      } else if (type >= 5) {
+        if (message.action == 'amazon_enabled') {
+          injectScripts(type, tab.id)
+        } else if (message.action == 'amazon_disabled') {
+          removeScripts(type, tab.id)
+        }
+      }
+    })
+  })
 })

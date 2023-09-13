@@ -6,6 +6,14 @@ var observer1 = new MutationObserver(function (mutationsList) {
     if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
       if (!eFlag) {
         console.log('running')
+
+        const searchInput = document.querySelector('#search')
+        if (searchInput) {
+          searchInput.focus()
+          console.log('focused')
+          iFlag = true
+        }
+
         const sections = document.getElementById('sections')
         if (sections) {
           const menuButton = document.getElementById('guide-button')
@@ -27,17 +35,20 @@ var observer1 = new MutationObserver(function (mutationsList) {
 
       /* if (!iFlag) {
         console.log('searching')
-        const searchInput = document.querySelector('#search')
+        const searchInput = document.querySelector('input#search')
         if (searchInput) {
           searchInput.focus()
           console.log('focused')
           iFlag = true
         }
       } */
+
       if (eFlag /* && iFlag */) {
-        observer1.disconnect()
-        observer1 = null
-        break
+        if (observer1) {
+          observer1.disconnect()
+          observer1 = null
+          break
+        }
       }
     }
   }

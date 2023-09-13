@@ -14,6 +14,12 @@
             padding-top: 50px;
             padding-bottom: 100px;
             font-size: 17px;
+            font-family: "Segoe UI", sans-serif;
+
+        }
+
+        *:focus {
+            outline: none;
         }
 
         ::-webkit-scrollbar {
@@ -83,51 +89,81 @@
 
         a {
             text-decoration: none;
+            color: lightblue;
         }
 
-        .toggle-switch {
+        .toggle {
             position: relative;
-            width: 42px;
-            height: 24px;
+            width: 46px;
+            height: 27px;
             vertical-align: top;
             float: right;
-        }
-
-        .toggle-switch input {
-            display: none;
+            border-radius: 34px;
+            background-color: #a2a2a2;
+            transition: 0.4s;
         }
 
         .slider {
             position: absolute;
             cursor: pointer;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: #a2a2a2;
+            background-color: white;
             transition: 0.4s;
             border-radius: 34px;
-        }
-
-        .slider:before {
-            content: "";
-            position: absolute;
             width: 16px;
             height: 16px;
             left: 4px;
             bottom: 4px;
-            background-color: white;
-            transition: 0.4s;
-            border-radius: 50%;
+            top: 4px;
         }
 
-
-        .toggle-switch input:checked+.slider {
-            background-color: #13b373;
+        #popupContainer {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
         }
 
-        .toggle-switch input:checked+.slider:before {
-            transform: translateX(18px);
+        #popupCard {
+            background-color: rgb(71, 71, 71);
+            height: 280px;
+            width: 500px;
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #popupCard.active {
+            opacity: 1;
+        }
+
+        textarea {
+            resize: none;
+            font-size: large;
+            font-weight: 600;
+            white-space: pre-wrap;
+            width: 300px;
+            padding: 20px;
+            border-radius: 10px;
+            max-lines: 4;
+        }
+
+        .button {
+            margin: 20px;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: medium;
+            font-weight: 600;
+            box-shadow: 2px 2px 10px 3px rgba(0, 0, 0, 0.39);
         }
     </style>
 </head>
@@ -147,10 +183,10 @@
         <div>
             <img src="images/YT_logo.png" alt="youtube logo" height="20px">
             <h3>Youtube</h3>
-            <label class="toggle-switch">
-                <input type="checkbox" id="yt_toggle" />
+
+            <button id="yt_toggle" class="toggle">
                 <span class="slider"></span>
-            </label>
+            </button>
             <script src="options.js"></script>
         </div>
 
@@ -164,10 +200,10 @@
             <img style="background-color: white; border-radius: 7px;" src="images/insta_logo.png" alt="instagram logo"
                 height="25px">
             <h3 style="margin-left: 10px;">Instagram</h3>
-            <label class="toggle-switch">
-                <input type="checkbox" id="insta_toggle" />
+
+            <button id="insta_toggle" class="toggle">
                 <span class="slider"></span>
-            </label>
+            </button>
             <script src="options.js"></script>
         </div>
 
@@ -178,23 +214,42 @@
     <div class="card">
         <div>
             <img style="border-radius: 7px;" src="images/amazon_logo.png" alt="instagram logo" height="25px">
-            <label class="toggle-switch">
-                <input type="checkbox" id="amazon_toggle" />
+
+            <button id="amazon_toggle" class="toggle">
                 <span class="slider"></span>
-            </label>
+            </button>
             <script src="options.js"></script>
         </div>
 
         <p>Removes home recommendations<br>Removes decimal price tag on search, excess delivery details<br>Simplifies UI
-            <br>Works only on Amazon.com for now
+
         </p>
 
     </div>
+
+    <div id="popupContainer">
+        <div id="popupCard">
+            <h3>Just to make sure this is really what you want,</h3>
+            <br>
+            <h3>type this out</h3>
+            <div style="height: 20px;"></div>
+            <textarea type="text" id="textInput" rows="4" cols="1" autofocus
+                placeholder="I have taken a deep breath and I choose to get feed recommendations"></textarea>
+            <br>
+            <button id="checkButton" class="button"
+                style="display: inline-block; padding-left: 30px; padding-right: 30px;">Check</button>
+
+            <button id="closeButton" class="button"
+                style="display: inline-block; color: white; background-color: #13b373;">I'm better
+                than this</button>
+        </div>
+    </div>
+
     <br><br>
     <div>
         Enjoying Thrive?
         <a href="https://chrome.google.com/webstore/detail/thrive/ihgeijoonjmdfkamhpgoedplnmbencgd?utm_source=ext_sidebar&hl=en-US"
-            target="_blank" style="color: lightblue; display: inline;">Leave
+            target="_blank" style="display: inline;">Leave
             a review</a>
     </div>
     <br>
@@ -206,14 +261,14 @@
             <span style="display: inline-block; vertical-align: top; margin-top: 10px;">
                 Nathan Miranda
                 <br>
-                <a style="display: inline-block; margin-top: 3px; color: lightblue;"
+                <a style="display: inline-block; margin-top: 3px;"
                     href="mailto:nathansmiranda@gmail.com">nathansmiranda@gmail.com</a>
             </span>
         </span>
-        <span style="display: inline-block;">
+        <span style="display: inline-block; color: grey;">
 
-            <a href="https://www.buymeacoffee.com/nathansmiranda" target="_blank"
-                style=" display: inline-block; margin-bottom: 10px;">
+            <a href="https://www.buymeacoffee.com/nathansmiranda" class="button" target="_blank"
+                style=" display: inline-block; margin-bottom: 10px; padding: 0;">
                 <img style="border-radius: 7px;" src="images/buymeacoffee.png" alt="buymeacoffee" height="50px"></a>
             <br>
             It really makes a difference.
@@ -222,9 +277,11 @@
 
     <br>
     <br>
+    <!-- <img style=" margin-right: 15px; vertical-align: top;" src="images/phone.png" alt="Phone" height="80px"> -->
     <div><img style="border-radius: 50px; margin-right: 15px; vertical-align: top;" src="images/kiwi.png"
             alt="Kiwi Broswer" height="40px">
-        <span style="display: inline-block;">Kiwi Broswer allows you to use chrome extensions on your phone. Chrome for
+        <span style="display: inline-block; color: grey;">Kiwi Broswer allows you to use chrome extensions on your
+            phone. Chrome for
             mobile
             doesn't allow
             extensions.<br>If
@@ -233,12 +290,19 @@
     </div>
     <br>
     <br>
-    If you like modernized UIs for the
-    internet, you'd love
-    <a href="https://chrome.google.com/webstore/detail/wikiwand-wikipedia-modern/emffkefkbkpkgpdeeooapgaicgmcbolj"
-        target="_blank" style="display: inline; margin-top: 3px; color: lightblue;">
-        Wikiwand</a>!
+    <span style="color: grey;">If you like modernized UIs for the
+        internet, you'd love</span>
 
+    <a href="https://chrome.google.com/webstore/detail/wikiwand-wikipedia-modern/emffkefkbkpkgpdeeooapgaicgmcbolj"
+        target="_blank" style="display: inline; margin-top: 3px;">
+        Wikiwand</a>!
+    <br>
+    <br>
+
+    <a href="https://github.com/Nathansmiranda/thrive" class="button" target="_blank" style=" display: inline-block; 
+            margin-bottom: 10px; padding: 10px; border-radius: 10px;
+            background-color: rgba(128, 128, 128, 0.249);">
+        <img style="border-radius: 7px;" src="images/github.png" alt="github" height="30px"></a>
 </body>
 
 </html>
