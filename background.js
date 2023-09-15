@@ -23,9 +23,9 @@ function getUrlType (url) {
 }
 
 const contentScripts = [
-  'YTHome.js',
-  'YTWatch.js',
-  'YT.js',
+  'youtube_home.js',
+  'youtube_watch.js',
+  'youtube.js',
   '',
   '',
   '',
@@ -35,30 +35,30 @@ const contentScripts = [
 ]
 
 const styles = [
-  'YoutubeStyles.css',
-  'YoutubeStyles.css',
-  'YoutubeStyles.css',
-  'YoutubeMobile.css',
-  'InstaStyles.css',
-  'AmazonStyles.css',
-  'AmazonStyles.css',
-  'AmazonStyles.css',
-  'AmazonStyles.css'
+  'youtube.css',
+  'youtube.css',
+  'youtube.css',
+  'youtube_mobile.css',
+  'instagram.css',
+  'amazon.css',
+  'amazon.css',
+  'amazon.css',
+  'amazon.css'
 ]
 
 const specificStyles = [
-  'YoutubeHomeStyles.css',
-  'YoutubeWatchStyles.css',
+  'youtube_home.css',
+  'youtube_watch.css',
   '',
   '',
   '',
-  'AmazonHomeStyles.css',
-  'AmazonHomeStyles.css',
-  'AmazonBrowseStyles.css',
-  'AmazonProductStyles.css'
+  'amazon_home.css',
+  'amazon_home.css',
+  'amazon_browse.css',
+  'amazon_product.css'
 ]
 
-async function injectScripts (urlType, tabId) {
+/* async  */ function injectScripts (urlType, tabId) {
   console.log(contentScripts[urlType])
   if (contentScripts[urlType] != '') {
     console.log('scripting')
@@ -69,7 +69,7 @@ async function injectScripts (urlType, tabId) {
     })
   }
 
-  await chrome.scripting.insertCSS({
+  /*  await  */ chrome.scripting.insertCSS({
     target: { tabId: tabId },
     files: [styles[urlType]]
   })
@@ -77,14 +77,14 @@ async function injectScripts (urlType, tabId) {
   if (specificStyles[urlType] != '') {
     console.log(specificStyles[urlType])
 
-    await chrome.scripting.insertCSS({
+    /*  await  */ chrome.scripting.insertCSS({
       target: { tabId: tabId },
       files: [specificStyles[urlType]]
     })
   }
 }
 
-async function removeScripts (urlType, tabId) {
+/* async */ function removeScripts (urlType, tabId) {
   console.log(contentScripts[urlType])
   if (contentScripts[urlType] != '') {
     console.log('removing scripts')
@@ -95,7 +95,7 @@ async function removeScripts (urlType, tabId) {
     }) */
   }
 
-  await chrome.scripting.removeCSS({
+  /*  await  */ chrome.scripting.removeCSS({
     target: { tabId: tabId },
     files: [styles[urlType]]
   })
@@ -103,7 +103,7 @@ async function removeScripts (urlType, tabId) {
   if (specificStyles[urlType] != '') {
     console.log(specificStyles[urlType])
 
-    await chrome.scripting.removeCSS({
+    /* await */ chrome.scripting.removeCSS({
       target: { tabId: tabId },
       files: [specificStyles[urlType]]
     })
