@@ -118,9 +118,9 @@ ytd-two-column-browse-results-renderer[page-subtype='home']
   min-width: 0 !important;
 }
 
-#primary.ytd-watch-flexy {
+/* #primary.ytd-watch-flexy {
   max-width: 1048px !important;
-}
+} */
 
 @keyframes transitionFullScreen {
   from {
@@ -140,14 +140,18 @@ ytd-two-column-browse-results-renderer[page-subtype='home']
   }
 }
 
-.html5-main-video {
-  height: fit-content !important;
-  width: 100% !important;
+/* .html5-video-container {
+  height: 100% !important;
 }
 
-.videoExpanded {
+.html5-main-video {
+  height: 100% !important;
+  width: 100% !important;
+} */
+
+/* .videoExpanded {
   animation: transitionFullScreen 1s ease-in-out;
-}
+} */
 
 /* .ytp-chrome-bottom {
   width: 100% !important;

@@ -25,13 +25,13 @@ var observer2 = new MutationObserver(function (mutationsList) {
               videoPlayer.style.maxHeight = '576px'
               videoPlayer.style.maxWidth = '1024px' */
 
-              document.addEventListener('fullscreenchange', handleFullscreen)
+             /*  document.addEventListener('fullscreenchange', handleFullscreen)
               document.addEventListener('mozfullscreenchange', handleFullscreen)
               document.addEventListener(
                 'webkitfullscreenchange',
                 handleFullscreen
               )
-              document.addEventListener('msfullscreenchange', handleFullscreen)
+              document.addEventListener('msfullscreenchange', handleFullscreen) */
 
               vFlag = true
             }
