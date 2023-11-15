@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "Thrive - Distraction Free Internet",
   "description": "Removes the feed from Youtube, Instagram and Amazon, so that you can browse distraction free",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "icons": {
     "16": "images/thrive_icon_16.png",
     "32": "images/thrive_icon_32.png",

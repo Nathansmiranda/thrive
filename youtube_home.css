@@ -29,6 +29,10 @@ ytd-mini-guide-entry-renderer[aria-label='Home'] {
   display: none !important;
 }
 
+ytd-mini-guide-entry-renderer[aria-label='History'] {
+  display: none !important;
+}
+
 ytd-mini-guide-entry-renderer[aria-label='YouTube Music'] {
   position: fixed !important;
   top: 57vh !important;
@@ -43,14 +47,7 @@ ytd-mini-guide-entry-renderer[aria-label='Subscriptions'] {
   transform: translate(-50%, -50%) !important;
 }
 
-ytd-mini-guide-entry-renderer[aria-label='History'] {
-  position: fixed !important;
-  top: 57vh !important;
-  left: 46.66% !important;
-  transform: translate(-50%, -50%) !important;
-}
-
-ytd-mini-guide-entry-renderer[aria-label='Library'] {
+ytd-mini-guide-entry-renderer[aria-label='You'] {
   position: fixed !important;
   top: 57vh !important;
   left: 53.32% !important;

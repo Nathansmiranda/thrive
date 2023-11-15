@@ -217,7 +217,8 @@ ytd-mini-guide-entry-renderer[aria-label='YouTube Music'] {
   top: unset !important;
   transform: unset !important;
 }
-ytd-mini-guide-entry-renderer[aria-label='Library'] {
+
+ytd-mini-guide-entry-renderer[aria-label='You'] {
   position: unset !important;
   left: unset !important;
   top: unset !important;
